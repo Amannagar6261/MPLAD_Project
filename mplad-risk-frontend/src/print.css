@@ -1,0 +1,406 @@
+/* =========================================================
+   GLOBAL PRINT STYLES
+   MPLAD PROJECT INTELLIGENCE
+   ========================================================= */
+
+@media print {
+
+  @page {
+    size: A4;
+    margin: 12mm;
+  }
+
+  /* -------------------------------------------------------
+     RESET PAGE / BODY
+     ------------------------------------------------------- */
+
+  html,
+  body,
+  #root {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  body {
+    background: #ffffff !important;
+  }
+
+
+  /* -------------------------------------------------------
+     REMOVE FIXED APPLICATION SHELL
+     ------------------------------------------------------- */
+
+  .app-container {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  .app-body {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+
+  /* -------------------------------------------------------
+     HIDE HEADER AND SIDEBAR
+     ------------------------------------------------------- */
+
+  .app-header,
+  .app-sidebar {
+    display: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     MAIN CONTENT
+     THIS IS THE IMPORTANT PART
+     ------------------------------------------------------- */
+
+  .main-content {
+    display: block !important;
+
+    position: static !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  /* -------------------------------------------------------
+     RISK ANALYSIS PAGE
+     ------------------------------------------------------- */
+
+  .risk-analysis-page {
+    display: block !important;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  /* -------------------------------------------------------
+     HIDE UI CONTROLS
+     ------------------------------------------------------- */
+
+  .risk-project-selector,
+  .page-header .secondary-button,
+  .page-header-actions,
+  .hero-project-button,
+  .primary-button,
+  .project-search-wrapper,
+  .project-search-results {
+    display: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PAGE HEADER
+     ------------------------------------------------------- */
+
+  .page-header {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 0 18px !important;
+    padding: 0 0 12px !important;
+
+    border-bottom: 1px solid #d8dee7 !important;
+  }
+
+  .page-header h1 {
+    margin: 0 !important;
+    font-size: 25px !important;
+  }
+
+  .page-header p {
+    margin-top: 6px !important;
+    font-size: 11px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PROJECT HERO
+     ------------------------------------------------------- */
+
+  .risk-project-hero {
+    display: block !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-bottom: 15px !important;
+    padding: 17px !important;
+
+    background: #f4f6f9 !important;
+    color: #172033 !important;
+
+    border: 1px solid #dce2ea !important;
+    border-radius: 12px !important;
+
+    box-shadow: none !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .risk-project-hero h2 {
+    color: #172033 !important;
+  }
+
+  .hero-project-label {
+    color: #667389 !important;
+  }
+
+  .hero-project-code {
+    color: #455267 !important;
+  }
+
+  .hero-project-meta {
+    color: #59677b !important;
+  }
+
+
+  /* -------------------------------------------------------
+     SCORE SECTION
+     ------------------------------------------------------- */
+
+  .risk-score-section {
+    display: grid !important;
+
+    grid-template-columns: 210px 1fr !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-bottom: 15px !important;
+
+    border: 1px solid #dce2ea !important;
+    border-radius: 12px !important;
+
+    box-shadow: none !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+  }
+
+  .risk-score-main {
+    padding: 18px !important;
+  }
+
+  .risk-score-status {
+    padding: 18px !important;
+  }
+
+  .score-number {
+    font-size: 42px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     NORMAL SECTIONS
+     ------------------------------------------------------- */
+
+  .risk-section {
+    display: block !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin-bottom: 15px !important;
+    padding: 17px !important;
+
+    border: 1px solid #dce2ea !important;
+    border-radius: 12px !important;
+
+    box-shadow: none !important;
+
+    overflow: visible !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  /* -------------------------------------------------------
+     SCORE COMPOSITION
+     ------------------------------------------------------- */
+
+  .score-composition-grid {
+    display: grid !important;
+
+    grid-template-columns: repeat(4, 1fr) !important;
+
+    gap: 8px !important;
+
+    width: 100% !important;
+  }
+
+  .score-component {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+
+  /* -------------------------------------------------------
+     EVIDENCE
+     ------------------------------------------------------- */
+
+  .evidence-grid {
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr !important;
+
+    gap: 10px !important;
+
+    width: 100% !important;
+  }
+
+  .evidence-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    overflow: visible !important;
+
+    box-shadow: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     CONTRIBUTING INDICATORS
+     ------------------------------------------------------- */
+
+  .risk-reasons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  .risk-reason {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     NEXT STEP
+     ------------------------------------------------------- */
+
+  .risk-next-step {
+    display: flex !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin-bottom: 15px !important;
+
+    box-shadow: none !important;
+
+    box-sizing: border-box !important;
+
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+
+  /* -------------------------------------------------------
+     DISCLAIMER
+     ------------------------------------------------------- */
+
+  .risk-disclaimer {
+    display: flex !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    margin-top: 10px !important;
+
+    font-size: 9px !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  /* -------------------------------------------------------
+     IMPORTANT:
+     REMOVE HEIGHT / OVERFLOW FROM CHILDREN
+     ------------------------------------------------------- */
+
+  .risk-analysis-page *,
+  .risk-analysis-page *::before,
+  .risk-analysis-page *::after {
+    max-height: none !important;
+  }
+
+
+  /* -------------------------------------------------------
+     AVOID BAD PAGE BREAKS
+     ------------------------------------------------------- */
+
+  .evidence-card,
+  .score-component,
+  .risk-reason,
+  .no-indicators-card,
+  .risk-next-step {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+
+  /* -------------------------------------------------------
+     PRINT COLORS
+     ------------------------------------------------------- */
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+}

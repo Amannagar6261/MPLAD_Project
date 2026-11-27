@@ -1,0 +1,143 @@
+function AttentionProjectsTable({
+  projects,
+  onViewAssessment,
+  onViewAll
+}) {
+  return (
+    <section className="intelligence-panel attention-panel">
+
+      <div className="attention-header">
+
+        <div>
+          <span className="panel-eyebrow">
+            INVESTIGATION PRIORITY
+          </span>
+
+          <h3>
+            Projects Requiring Attention
+          </h3>
+
+          <p>
+            Projects prioritized based on detected
+            risk indicators.
+          </p>
+        </div>
+
+        <button
+          className="view-all-button"
+          onClick={onViewAll}
+        >
+          View All →
+        </button>
+
+      </div>
+
+      <div className="attention-table-wrapper">
+
+        <table className="attention-table">
+
+          <thead>
+            <tr>
+              <th>PROJECT</th>
+              <th>RISK</th>
+              <th>LEVEL</th>
+              <th>PRIMARY INDICATOR</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            {projects.length === 0 ? (
+
+              <tr>
+                <td
+                  colSpan="5"
+                  className="attention-empty"
+                >
+                  No projects currently require attention.
+                </td>
+              </tr>
+
+            ) : (
+
+              projects.map((project) => (
+
+                <tr key={project.projectId}>
+
+                  <td>
+                    <div className="attention-project">
+
+                      <strong>
+                        {project.projectName}
+                      </strong>
+
+                      <span>
+                        {project.projectCode}
+                      </span>
+
+                    </div>
+                  </td>
+
+                  <td>
+
+                    <div className="risk-score-inline">
+                      <strong>
+                        {project.riskScore}
+                      </strong>
+
+                      <span>
+                        /100
+                      </span>
+                    </div>
+
+                  </td>
+
+                  <td>
+
+                    <span
+                      className={`risk-level-badge ${project.riskLevel.toLowerCase()}`}
+                    >
+                      {project.riskLevel}
+                    </span>
+
+                  </td>
+
+                  <td>
+                    <span className="indicator-text">
+                      {project.primaryIndicator}
+                    </span>
+                  </td>
+
+                  <td>
+
+                    <button
+                      className="assessment-action"
+                      onClick={() =>
+                        onViewAssessment(
+                          project.projectId
+                        )
+                      }
+                    >
+                      View Assessment →
+                    </button>
+
+                  </td>
+
+                </tr>
+
+              ))
+
+            )}
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+  );
+}
+
+export default AttentionProjectsTable;

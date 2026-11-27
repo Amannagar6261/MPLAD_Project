@@ -1,0 +1,737 @@
+/* =========================================================
+   PROJECTS PAGE
+   ========================================================= */
+
+.page-section {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 34px 38px 45px;
+}
+
+/* =========================================================
+   PAGE HEADER
+   ========================================================= */
+
+.page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 24px;
+}
+
+.page-eyebrow {
+  margin: 0 0 8px;
+  color: #6366f1;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.page-heading h2 {
+  margin: 0;
+  color: #172033;
+  font-size: 32px;
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+}
+
+.page-heading > div:first-child > p:last-child {
+  margin: 9px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.projects-header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.projects-result-count {
+  flex-shrink: 0;
+  padding: 9px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.projects-result-count strong {
+  color: #172033;
+  font-weight: 750;
+}
+
+/* =========================================================
+   IMPORT / MANUAL ENTRY BUTTONS
+   ========================================================= */
+
+.projects-import-button,
+.projects-new-button {
+  height: 38px;
+  padding: 0 14px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+/* Import Data */
+
+.projects-import-button {
+  border: 1px solid #4f46e5;
+  background: #4f46e5;
+  color: #ffffff;
+  box-shadow: 0 2px 5px rgba(79, 70, 229, 0.16);
+}
+
+.projects-import-button:hover {
+  background: #4338ca;
+  border-color: #4338ca;
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.18);
+  transform: translateY(-1px);
+}
+
+.projects-import-button:active {
+  transform: translateY(0);
+}
+
+/* Manual Entry */
+
+.projects-new-button {
+  border: 1px solid #dbe2ea;
+  background: #ffffff;
+  color: #475569;
+}
+
+.projects-new-button:hover {
+  border-color: #c7d2fe;
+  background: #eef2ff;
+  color: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.projects-new-button:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   ACTIVE RISK FILTER
+   ========================================================= */
+
+.projects-risk-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 15px;
+  padding: 13px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 11px;
+  background: #ffffff;
+}
+
+.projects-risk-filter-bar > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.projects-risk-filter-bar span {
+  color: #94a3b8;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.projects-risk-filter-bar strong {
+  color: #172033;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.projects-risk-filter-bar small {
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.projects-risk-filter-bar button {
+  flex-shrink: 0;
+  height: 32px;
+  padding: 0 11px;
+  border: 1px solid #dbe2ea;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.projects-risk-filter-bar button:hover {
+  border-color: #6366f1;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+/* Risk-specific visual indicators */
+
+.risk-filter-low {
+  border-left: 3px solid #22c55e;
+}
+
+.risk-filter-medium {
+  border-left: 3px solid #f59e0b;
+}
+
+.risk-filter-high {
+  border-left: 3px solid #ef4444;
+}
+
+.risk-filter-critical {
+  border-left: 3px solid #dc2626;
+}
+
+/* =========================================================
+   FILTER PANEL
+   ========================================================= */
+
+.projects-filter-panel {
+  display: grid;
+  grid-template-columns:
+    minmax(300px, 1.7fr)
+    minmax(150px, 0.7fr)
+    minmax(150px, 0.7fr)
+    minmax(150px, 0.7fr)
+    auto;
+  align-items: end;
+  gap: 12px;
+  padding: 17px;
+  margin-bottom: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+}
+
+.projects-search-wrapper,
+.projects-filter-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.projects-search-wrapper label,
+.projects-filter-wrapper label {
+  color: #64748b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.projects-search-wrapper input,
+.projects-filter-wrapper select {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  outline: none;
+  background: #f8fafc;
+  color: #172033;
+  font-size: 12px;
+  transition:
+    border-color 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.projects-search-wrapper input::placeholder {
+  color: #94a3b8;
+}
+
+.projects-search-wrapper input:hover,
+.projects-filter-wrapper select:hover {
+  background: #ffffff;
+}
+
+.projects-search-wrapper input:focus,
+.projects-filter-wrapper select:focus {
+  border-color: #818cf8;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.projects-clear-button {
+  height: 40px;
+  padding: 0 15px;
+  border: 1px solid #dbe2ea;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.projects-clear-button:hover {
+  border-color: #c7d2fe;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+/* =========================================================
+   TABLE
+   ========================================================= */
+
+.projects-table-panel {
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.035);
+}
+
+.projects-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.projects-table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.projects-table th {
+  height: 43px;
+  padding: 0 17px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+  color: #94a3b8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.projects-table th:nth-child(1) {
+  width: 25%;
+}
+
+.projects-table th:nth-child(2) {
+  width: 13%;
+}
+
+.projects-table th:nth-child(3) {
+  width: 18%;
+}
+
+.projects-table th:nth-child(4) {
+  width: 13%;
+}
+
+.projects-table th:nth-child(5) {
+  width: 13%;
+}
+
+.projects-table th:nth-child(6) {
+  width: 10%;
+}
+
+.projects-table th:nth-child(7) {
+  width: 8%;
+}
+
+.projects-table td {
+  padding: 13px 17px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #334155;
+  font-size: 11px;
+  vertical-align: middle;
+}
+
+.projects-table tbody tr {
+  transition: background 0.12s ease;
+}
+
+.projects-table tbody tr:hover {
+  background: #fafbff;
+}
+
+.projects-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+/* =========================================================
+   PROJECT NAME / LOCATION
+   ========================================================= */
+
+.project-primary {
+  overflow: hidden;
+  color: #1e293b;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-secondary {
+  margin-top: 4px;
+  color: #94a3b8;
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    monospace;
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.projects-table td:nth-child(3) .project-primary {
+  font-weight: 600;
+}
+
+/* =========================================================
+   TYPE BADGE
+   ========================================================= */
+
+.project-type-badge {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 5px 8px;
+  overflow: hidden;
+  border: 1px solid #e0e7ff;
+  border-radius: 6px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 9px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   STATUS BADGES
+   ========================================================= */
+
+.project-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 67px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 9px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.status-completed {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status-ongoing {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-delayed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-cancelled,
+.status-canceled {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.status-unknown {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* =========================================================
+   ACTION
+   ========================================================= */
+
+.project-view-button {
+  height: 31px;
+  padding: 0 11px;
+  border: 1px solid #dbe2ea;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.project-view-button:hover {
+  border-color: #6366f1;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+/* =========================================================
+   RISK LOADING
+   ========================================================= */
+
+.projects-risk-loading {
+  display: flex;
+  min-height: 240px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #64748b;
+  font-size: 11px;
+}
+
+.loading-spinner {
+  width: 17px;
+  height: 17px;
+  border: 2px solid #e2e8f0;
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: projects-spin 0.75s linear infinite;
+}
+
+@keyframes projects-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.projects-empty-state {
+  padding: 65px 20px;
+  text-align: center;
+}
+
+.projects-empty-state h3 {
+  margin: 0;
+  color: #334155;
+  font-size: 16px;
+}
+
+.projects-empty-state p {
+  margin: 7px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.projects-empty-state button {
+  margin-top: 15px;
+  height: 34px;
+  padding: 0 13px;
+  border: 1px solid #dbe2ea;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #475569;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.projects-empty-state button:hover {
+  border-color: #6366f1;
+  background: #eef2ff;
+  color: #4f46e5;
+}
+
+/* =========================================================
+   NOTE
+   ========================================================= */
+
+.projects-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #f8fafc;
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.projects-note strong {
+  flex-shrink: 0;
+  color: #475569;
+}
+
+/* =========================================================
+   LOADING / ERROR
+   ========================================================= */
+
+.dashboard-placeholder {
+  display: flex;
+  min-height: 320px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.dashboard-placeholder h3 {
+  margin: 0;
+  color: #172033;
+  font-size: 17px;
+}
+
+.dashboard-placeholder p {
+  max-width: 500px;
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1250px) {
+  .projects-filter-panel {
+    grid-template-columns:
+      minmax(250px, 1.5fr)
+      minmax(140px, 0.7fr)
+      minmax(140px, 0.7fr)
+      minmax(140px, 0.7fr);
+  }
+
+  .projects-clear-button {
+    grid-column: 1 / -1;
+    justify-self: flex-start;
+  }
+}
+
+@media (max-width: 1100px) {
+  .projects-filter-panel {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projects-search-wrapper {
+    grid-column: 1 / -1;
+  }
+
+  .projects-clear-button {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .projects-header-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .projects-result-count {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .page-section {
+    padding: 24px 17px 35px;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .page-heading h2 {
+    font-size: 28px;
+  }
+
+  .projects-header-actions {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .projects-import-button,
+  .projects-new-button,
+  .projects-result-count {
+    width: 100%;
+  }
+
+  .projects-result-count {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .projects-risk-filter-bar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .projects-risk-filter-bar button {
+    width: 100%;
+  }
+
+  .projects-filter-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-search-wrapper {
+    grid-column: auto;
+  }
+
+  .projects-clear-button {
+    width: 100%;
+  }
+
+  .projects-note {
+    flex-direction: column;
+    gap: 3px;
+  }
+}
